@@ -10,7 +10,7 @@ jobs:
     working_directory: ~/rails-docker-tkt/src
     steps:
       -checkout:
-        path: ~/rails-docker-tkt
+          path: ~/rails-docker-tkt
       - ruby/install-deps
 
   test:
