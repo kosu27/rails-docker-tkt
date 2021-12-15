@@ -9,7 +9,7 @@ jobs:
       - image: circleci/ruby:2.7
     working_directory: ~/rails-docker-tkt/src
     steps:
-      -checkout:
+      - checkout:
           path: ~/rails-docker-tkt
       - ruby/install-deps
 
@@ -65,8 +65,7 @@ workflows:
     jobs:
       - build
       - test:
-          requires:
-            -build
+          requires: -build
       - deploy:
           requires:
             - test
